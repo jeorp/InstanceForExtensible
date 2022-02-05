@@ -1,0 +1,38 @@
+
+name: InstanceForExtensble
+dependencies:
+- base
+- text
+- bytestring
+- mtl
+- extensible
+- cassava
+- data-default-class
+- sqlite-simple
+- hspec
+
+library:
+  source-dirs: src
+
+executables:
+  InstanceForExtensble-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:  
+    - InstanceForExtensble
+
+tests:
+  InstanceForExtensble-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - InstanceForExtensble
+
