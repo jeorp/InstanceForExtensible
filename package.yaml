@@ -4,6 +4,9 @@ dependencies:
 - base
 - text
 - bytestring
+- constraints
+- containers
+- unordered-containers
 - mtl
 - extensible
 - cassava
